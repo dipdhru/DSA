@@ -1,15 +1,18 @@
-//Insertion sort
+//Selection Sort
 
-let a = [2,4,1,7,6,3,5,8,9]
+a = [4,1,3,2]
 
-function insertionSort(a=[]){
-    for(let i = 0; i < a.length ; i++){
-        console.log(i)
-        for(let j = i+1 ; j < a.length; j++){
-            console.log(j)
-            if(a[i] > a[j]) [a[i],a[j]] = [a[j],a[i]]
-        }
+function selectionSort(a=[]){
+    for(let i = 0 ; i < a.length-1 ; i++){
+        let smallest = i
+        for(let j = i+1 ; j < a.length ; j++)
+            smallest = a[smallest] < a[j] ? smallest : j
+
+        if( i != smallest )
+            [a[i],a[smallest]] =[a[smallest],a[i]] 
+        
     }
 }
-insertionSort(a)
+
+selectionSort(a)
 console.log(a)

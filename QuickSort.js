@@ -6,7 +6,7 @@ function QuickSort(arr= [], len = arr.length){
     //base case
     if(arr.length <= 1) return arr
 
-    //calculation                       // [2,1,3] >>> left = 1,2 
+    //calculation
     let pivot = arr[len-1];
     let left = [];
     let right =  [];
